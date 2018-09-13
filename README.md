@@ -15,7 +15,7 @@ rails db:migrate
 rails db:seed
 rails console, check to see if the Hogs were seeded
 exit console (ctrl+ c)
-rails server
+rails server 
 
 HTML for Hog Card:
 ```
