@@ -11,7 +11,7 @@
 make sure to run your rails server to test, the index JS is set up to use localhost:3000.
 
 start by running:
-
+```
 rails db:migrate
 
 rails db:seed
@@ -21,6 +21,7 @@ rails console, check to see if the Hogs were seeded
 exit console (ctrl+ c)
 
 rails server 
+```
 
 HTML for Hog Card:
 ```
