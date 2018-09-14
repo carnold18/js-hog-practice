@@ -56,25 +56,26 @@ function createNewHog(event) {
 		    award: awardInput.value,
   		})
 	}).then(getHogs)
+	hogForm.reset();
 
 }
 
 function editGreasedHog(event) {
 	if (event.target.id.includes('edit')) {
-			event.preventDefault();
+		event.preventDefault();
 			fetch(hogURL+'/'+`${event.target.dataset.id}`, {
 				method: 'PATCH',
 				headers: {
 					'Accepts': 'application/json',
 		    		"Content-Type": "application/json; charset=utf-8",
 				}
-			})
+			}).then(getHogs)
 	}
 	else if (event.target.id.includes('delete')) {
 			event.preventDefault();
 			fetch(hogURL+'/'+`${event.target.dataset.id}`, {
 				method: 'DELETE'
-			})
+			}).then(getHogs)
 	}
 }
 
