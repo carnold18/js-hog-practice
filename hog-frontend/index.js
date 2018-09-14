@@ -1,6 +1,8 @@
 console.log('ello')
 const hogURL = 'http://localhost:3000/hogs'
 
+document.addEventListener("DOMContentLoaded", getHogs);
+
 const parsedJSON = response => response.json()
 const hogList = document.getElementById('hog-list')
 const hogForm = document.getElementById('hog-form')
@@ -79,5 +81,4 @@ function editGreasedHog(event) {
 	}
 }
 
-getHogs();
 
